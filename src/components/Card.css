@@ -1,0 +1,24 @@
+.card-container {
+  display: flex;              /* use flexbox */
+  justify-content: space-between; /* logo left, button right */
+  align-items: center;        /* vertical alignment */
+  width: 100%;                /* span full card width */
+  padding: 20px;              /* spacing inside card */
+  border-top: 30px;
+}
+.card-btn button {
+  background: transparent;    
+  border: 2px solid #231f19;  
+  color: #231f19;             
+  font-size: 1rem;
+  padding: 10px 20px;
+  border-radius: 25px;
+  cursor: pointer;
+  transition: all 0.2s ease;
+  margin-right: 30px;
+}
+
+.card-btn button:hover {
+  background: rgba(35, 31, 25, 0.1); 
+  transform: scale(1.05);
+}
