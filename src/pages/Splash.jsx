@@ -1,6 +1,7 @@
 import LiquidEther from "../components/LiquidEther.jsx";
 import "./Splash.css";
 import Card from "../components/Card.jsx";
+import Button from "../components/Button.jsx";
 
 
 export default function Splash() {
@@ -43,6 +44,8 @@ export default function Splash() {
               Decentralized Technology.
             </p>
           </div>
+
+          <Button />
 
           <span className="splash-subdescription">
             Decentralized • Creator-Driven • Community-Powered

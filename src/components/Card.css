@@ -6,7 +6,9 @@
   padding: 20px;              /* spacing inside card */
   border-top: 30px;
 }
-.card-btn button {
+
+
+.btn  {
   background: transparent;    
   border: 2px solid #231f19;  
   color: #231f19;             
@@ -18,7 +20,8 @@
   margin-right: 30px;
 }
 
-.card-btn button:hover {
-  background: rgba(35, 31, 25, 0.1); 
-  transform: scale(1.05);
+.btn hover {
+  box-shadow: blanchedalmond; 
+  transform: translateY(-2px);
+  background-color: #231f19;
 }
