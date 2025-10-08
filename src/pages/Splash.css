@@ -1,35 +1,64 @@
-.Background {
-  z-index: -1;
-  position: absolute;
-  inset: 0;
-  height: 100vh;
-  width: 100vw;
+/* === Overall Layout === */
+html, body {
+  margin: 0;
+  padding: 0;
+  height: 100%;
+  background-color: black;
+  color: white;
+  font-family: 'Inter', sans-serif;
 }
 
 .splash-container {
   position: relative;
   height: 100vh;
   width: 100vw;
+  overflow: hidden;
 }
 
+/* === Background Layer === */
+.Background {
+  position: absolute;
+  inset: 0;
+  z-index: 1;
+  height: 100%;
+  width: 100%;
+}
+
+/* === Logo Card (Top Center) === */
 .splash-card {
   position: absolute;
-  top: 4rem;          /* distance from top */
+  top: 2rem;
   left: 50%;
   transform: translateX(-50%);
-  z-index: 1;
+  text-align: center;
 }
 
+.card-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.card-logo {
+  width: 120px; /* smaller logo */
+  height: auto;
+  z-index: 2;
+
+}
+
+/* === Main Splash Section (Center) === */
 .splash-main {
   position: relative;
   height: 100%;
   width: 100%;
   display: flex;
   flex-direction: column;
-  justify-content: center; /* center title + description */
+  justify-content: center;
   align-items: center;
   text-align: center;
   padding: 2rem;
+  z-index: 2;
+
 }
 
 .splash-title {
@@ -41,13 +70,33 @@
 .splash-description {
   font-size: 1.5rem;
   max-width: 800px;
+  margin-bottom: 2rem;
 }
 
 .splash-subdescription {
   position: absolute;
-  bottom: 8rem;
+  bottom: 5rem;
   left: 50%;
   transform: translateX(-50%);
-  font-size: 1.2rem;
+  font-size: 1.1rem;
   font-weight: 500;
+  opacity: 0.85;
+}
+
+/* === Button Styling === */
+.btn {
+  background: transparent;
+  border: 2px solid white;
+  color: white;
+  font-size: 1rem;
+  padding: 10px 25px;
+  border-radius: 25px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.btn:hover {
+  background-color: white;
+  color: black;
+  transform: translateY(-2px);
 }

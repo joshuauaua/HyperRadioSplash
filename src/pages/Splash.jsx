@@ -1,14 +1,10 @@
 import LiquidEther from "../components/LiquidEther.jsx";
 import "./Splash.css";
-import Card from "../components/Card.jsx";
-import Button from "../components/Button.jsx";
-
 
 export default function Splash() {
   return (
     <>
       <div className="splash-container">
-
         {/* Background */}
         <div className="Background">
           <LiquidEther
@@ -32,7 +28,10 @@ export default function Splash() {
 
         {/* Card at top */}
         <div className="splash-card">
-          <Card />
+          <div className="card-container">
+            <img className="card-logo" src="/src/assets/logo.svg" alt-text="Hyper Radio Logo" />
+          </div>{" "}
+          
         </div>
 
         {/* Centered content */}
@@ -45,7 +44,7 @@ export default function Splash() {
             </p>
           </div>
 
-          <Button />
+          <button className="btn">Join Waitlist</button>
 
           <span className="splash-subdescription">
             Decentralized • Creator-Driven • Community-Powered
