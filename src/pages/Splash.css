@@ -31,13 +31,10 @@ html, body {
   left: 50%;
   transform: translateX(-50%);
   text-align: center;
+  z-index: 3;
 }
 
-.card-container {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-}
+
 
 .card-logo {
   width: 120px; /* smaller logo */
