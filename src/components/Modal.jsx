@@ -24,7 +24,7 @@ export default function Modal({ isOpen, onClose }) {
     const payload = { name, email };
 
     try {
-      const response = await fetch("http://localhost:5016/register", {
+      const response = await fetch("https://feabdwdplmspjkijgoiu.supabase.co/functions/v1/bright-task", {
         method: "POST",
         headers: { "Content-Type": "application/json" },
         body: JSON.stringify(payload),
