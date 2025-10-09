@@ -34,13 +34,10 @@ html, body {
   z-index: 3;
 }
 
-
-
 .card-logo {
-  width: 120px; /* smaller logo */
+  width: 120px;
   height: auto;
   z-index: 2;
-
 }
 
 /* === Main Splash Section (Center) === */
@@ -55,23 +52,25 @@ html, body {
   text-align: center;
   padding: 2rem;
   z-index: 2;
-
 }
 
 .splash-title {
-  font-size: 3rem;
+  font-size: 5.4rem;
+  font-family: 'DM Sans', sans-serif;
   font-weight: bold;
   margin-bottom: 1rem;
 }
 
 .splash-description {
   font-size: 1.5rem;
-  max-width: 800px;
+  font-family: 'Noto Serif', serif;
   margin-bottom: 2rem;
 }
 
 .splash-footer {
   position: absolute;
+  font-family: 'Noto Serif';
+  font-weight: light;
   bottom: 5rem;
   left: 50%;
   transform: translateX(-50%);
@@ -88,7 +87,7 @@ html, body {
   font-size: 1rem;
   padding: 10px 25px;
   border-radius: 25px;
-  transition: all 0.3s ease;
+  transition: all 0.1s ease;
 }
 
 .btn:hover {
@@ -96,4 +95,55 @@ html, body {
   cursor: pointer;
   color: black;
   transform: translateY(-2px);
+}
+
+/* === Responsive Media Queries === */
+@media (max-width: 768px) {
+  .card-logo {
+    width: 90px; /* smaller logo for tablets */
+  }
+
+  .splash-title {
+    font-size: 2.5rem; /* smaller title */
+  }
+
+  .splash-description {
+    font-size: 1.2rem; /* smaller description */
+    max-width: 90%;
+  }
+
+  .splash-footer {
+    bottom: 3rem;
+    font-size: 1rem;
+  }
+
+  .btn {
+    font-size: 0.9rem;
+    padding: 8px 20px;
+  }
+}
+
+@media (max-width: 480px) {
+  .card-logo {
+    width: 70px; /* mobile logo */
+  }
+
+  .splash-title {
+    font-size: 2rem;
+  }
+
+  .splash-description {
+    font-size: 1rem;
+    max-width: 95%;
+  }
+
+  .splash-footer {
+    bottom: 2rem;
+    font-size: 0.9rem;
+  }
+
+  .btn {
+    font-size: 0.85rem;
+    padding: 6px 18px;
+  }
 }

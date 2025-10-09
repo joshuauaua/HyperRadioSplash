@@ -14,16 +14,16 @@ export default function Splash() {
           <LiquidEther
             colors={["#5227FF", "#FF9FFC", "#B19EEF"]}
             mouseForce={20}
-            cursorSize={100}
+            cursorSize={250}
             isViscous={false}
             viscous={30}
             iterationsViscous={32}
             iterationsPoisson={32}
-            resolution={0.5}
+            resolution={0.7}
             isBounce={false}
             autoDemo={true}
             autoSpeed={0.5}
-            autoIntensity={2.2}
+            autoIntensity={6.2}
             takeoverDuration={0.25}
             autoResumeDelay={3000}
             autoRampDuration={0.6}
@@ -43,7 +43,7 @@ export default function Splash() {
           <div className="splash-text">
             <h1 className="splash-title">The Sound Of Local</h1>
             <p className="splash-description">
-              Built for Local Music, Reinvented with Decentralized Technology.
+            A new kind of music platform — centered on artists, powered by communities.
             </p>
           </div>
 
