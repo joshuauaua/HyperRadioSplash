@@ -70,7 +70,7 @@ html, body {
   margin-bottom: 2rem;
 }
 
-.splash-subdescription {
+.splash-footer {
   position: absolute;
   bottom: 5rem;
   left: 50%;
@@ -88,12 +88,12 @@ html, body {
   font-size: 1rem;
   padding: 10px 25px;
   border-radius: 25px;
-  cursor: pointer;
   transition: all 0.3s ease;
 }
 
 .btn:hover {
   background-color: white;
+  cursor: pointer;
   color: black;
   transform: translateY(-2px);
 }

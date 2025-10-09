@@ -52,10 +52,11 @@ export default function Splash() {
           </button>
           <Modal isOpen={isModalOpen} onClose={() => setIsModalOpen(false)} />
 
-          <span className="splash-subdescription">
-            Decentralized • Creator-Driven • Community-Powered
-          </span>
+         
         </main>
+        <footer className="splash-footer">
+            Decentralized • Creator-Driven • Community-Powered
+          </footer>
       </div>
     </>
   );

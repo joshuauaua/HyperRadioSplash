@@ -12,7 +12,7 @@
 .modal-content {
   background: black;
   color: white;
-  padding: 2rem;
+  padding: 5rem;
   border-radius: 12px;
   width: 90%;
   max-width: 400px;
@@ -52,12 +52,19 @@
   border-radius: 5px;
 }
 
-.modal-form button {
-  background: #fff;
-  color: black;
-  border: none;
-  padding: 0.6rem 1rem;
-  border-radius: 6px;
-  cursor: pointer;
-  font-weight: bold;
+.modal-btn {
+  background: transparent;
+  border: 2px solid white;
+  color: white;
+  font-size: 1rem;
+  padding: 10px 25px;
+  border-radius: 25px;
+  transition: all 0.3s ease;
 }
+
+
+.modal-btn:hover {
+  background-color: white;
+  cursor: pointer;
+  color: black;
+  transform: translateY(-2px);}
