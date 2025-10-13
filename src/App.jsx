@@ -32,13 +32,6 @@ export default function App() {
   return (
     <div className="App">
       <Splash />
-
-      <h2>Instruments</h2>
-      <ul>
-        {instruments.map((instrument) => (
-          <li key={instrument.id}>{instrument.name}</li>
-        ))}
-      </ul>
     </div>
   );
 }
