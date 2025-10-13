@@ -1,12 +1,44 @@
-import Splash from './pages/Splash.jsx';
-import './App.css'
+import { useEffect, useState } from "react";
+import { createClient } from "@supabase/supabase-js";
+import Splash from "./pages/Splash.jsx";
+import "./App.css";
 
-export default function App(){
+// ✅ Initialize Supabase client using your environment variables
+const supabase = createClient(
+  import.meta.env.VITE_SUPABASE_URL,
+  import.meta.env.VITE_SUPABASE_PUBLISHABLE_KEY
+);
 
-  return(
+export default function App() {
+  const [instruments, setInstruments] = useState([]);
 
-    <>
-    <Splash />
-    </>
-  )
+  // ✅ Fetch instruments when component mounts
+  useEffect(() => {
+    getInstruments();
+  }, []);
+
+  // ✅ Define async fetch function
+  async function getInstruments() {
+    const { data, error } = await supabase.from("waitlist").select();
+
+    if (error) {
+      console.error("Error fetching waitlist:", error);
+      return;
+    }
+
+    setInstruments(data);
+  }
+
+  return (
+    <div className="App">
+      <Splash />
+
+      <h2>Instruments</h2>
+      <ul>
+        {instruments.map((instrument) => (
+          <li key={instrument.id}>{instrument.name}</li>
+        ))}
+      </ul>
+    </div>
+  );
 }

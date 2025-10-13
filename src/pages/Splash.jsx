@@ -2,6 +2,8 @@ import LiquidEther from "../components/LiquidEther.jsx";
 import "./Splash.css";
 import Modal from "/src/components/Modal.jsx";
 import { useState } from "react"
+import logo from "/src/assets/logo.svg"
+
 
 export default function Splash() {
   const [isModalOpen, setIsModalOpen] = useState(false);
@@ -33,7 +35,7 @@ export default function Splash() {
         <div className="splash-card">
           <img
             className="card-logo"
-            src="/src/assets/logo.svg"
+            src={logo}
             alt-text="Hyper Radio Logo"
           />
         </div>

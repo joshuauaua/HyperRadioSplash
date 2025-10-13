@@ -5,13 +5,13 @@ export default function Modal({ isOpen, onClose }) {
   const [show, setShow] = useState(false);
   const [name, setName] = useState("");
   const [email, setEmail] = useState("");
-  const [notification, setNotification] = useState(""); // new state
-  const [success, setSuccess] = useState(false); // track success
+  const [notification, setNotification] = useState(""); 
+  const [success, setSuccess] = useState(false); 
 
   useEffect(() => {
     if (isOpen) {
       setTimeout(() => setShow(true), 10);
-      setNotification(""); // clear messages when modal opens
+      setNotification("");
       setSuccess(false);
     } else {
       setShow(false);
@@ -19,31 +19,34 @@ export default function Modal({ isOpen, onClose }) {
   }, [isOpen]);
 
   const handleSubmit = async (e) => {
-    e.preventDefault(); // prevent page refresh
+    e.preventDefault();
 
     const payload = { name, email };
 
     try {
-      const response = await fetch("https://feabdwdplmspjkijgoiu.supabase.co/functions/v1/bright-task", {
-        method: "POST",
-        headers: { "Content-Type": "application/json" },
-        body: JSON.stringify(payload),
-      });
+      const response = await fetch(
+        "https://feabdwdplmspjkijgoiu.supabase.co/functions/v1/bright-task",
+        {
+          method: "POST",
+          headers: { "Content-Type": "application/json" },
+          body: JSON.stringify(payload),
+        }
+      );
 
       if (response.ok) {
+        const result = await response.json();
         setSuccess(true);
         setNotification("You have successfully joined the waitlist!");
+        console.log("Edge Function response:", result);
         setName("");
         setEmail("");
       } else {
         const errorData = await response.json();
         setSuccess(false);
-        setNotification(
-          errorData?.message || "Failed to register. Please try again."
-        );
+        setNotification(errorData?.message || "Failed to register. Please try again.");
       }
     } catch (error) {
-      console.error("Error:", error);
+      console.error("Error calling Edge Function:", error);
       setSuccess(false);
       setNotification("Something went wrong. Please try again.");
     }
@@ -70,7 +73,6 @@ export default function Modal({ isOpen, onClose }) {
                 placeholder="Your Name"
                 value={name}
                 onChange={(e) => setName(e.target.value)}
-                required
               />
               <input
                 type="email"
