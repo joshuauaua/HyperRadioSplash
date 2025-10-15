@@ -22,12 +22,12 @@ export default function Splash() {
             iterationsViscous={32}
             iterationsPoisson={32}
             resolution={0.7}
-            isBounce={false}
+            isBounce={true}
             autoDemo={true}
-            autoSpeed={0.5}
+            autoSpeed={0.1}
             autoIntensity={6.2}
             takeoverDuration={0.25}
-            autoResumeDelay={3000}
+            autoResumeDelay={10}
             autoRampDuration={0.6}
           />
         </div>
